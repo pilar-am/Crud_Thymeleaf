@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicació sucursals</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb( 153, 209, 192 );">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+	    <ul class="navbar-nav container">
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/sucursal/getAll}" style="color:black">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" th:href="@{/sucursal/formCrearSucursal}" style="color:black">Afegir Sucursal</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+
+    <div class="container">
+        
+	<div class="card mt-5 p-4" style="width: 50%; margin: 0 auto;">
+		<h2 class="mb-3">Afegir Sucursal</h2>
+	       <form action="#" th:action="@{/add}" th:object="${sucursal}" method="POST">
+            <input type="text" th:field="*{nomSucursal}" placeholder="Nom de la Sucursal" class="form-control mb-3">
+
+            <input type="text" th:field="*{paisSucursal}" placeholder="País de la Sucursal" class="form-control mb-3">
+
+            <button type="submit" class="btn btn-light mb-3" style="width:100%; background-color: rgb( 153, 209, 192 );">Desa</button>
+        </form>
+	</div>
+
+    </div>
+</body>
+
+</html>
