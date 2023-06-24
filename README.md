@@ -1,4 +1,4 @@
-# S05T01N01_Crud_Thymeleaf
+# Crud_Thymeleaf
 
 Aplicació Web CRUD amb MySQL seguint el patró MVC<br>
 Vista desenvolupada amb Thymeleaf
